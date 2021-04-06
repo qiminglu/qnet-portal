@@ -17,7 +17,7 @@
           ></sidebar-item>
         </sidebar-item>
 
-<!--
+        <!--
         <sidebar-item
           :link="{
             name: 'Examples',
@@ -123,18 +123,21 @@
           }"
         >
         </sidebar-item>
--->
+        -->
         <sidebar-item
           :link="{
-            name: 'Submit',
+            name: 'Services',
             icon: 'ni ni-ungroup text-orange',
           }"
         >
           <sidebar-item
-            :link="{ name: 'Entanglement Distribution', path: '/components/buttons' }"
+            :link="{
+              name: 'Entanglement Distribution',
+              path: '/components/buttons',
+            }"
           ></sidebar-item>
           <sidebar-item
-            :link="{ name: 'Alternative', path: '/pages/user' }"
+            :link="{ name: 'Teleportation', path: '/pages/user' }"
           ></sidebar-item>
         </sidebar-item>
 
@@ -142,7 +145,7 @@
           :link="{
             name: 'Monitoring',
             icon: 'ni ni-map-big text-primary',
-            path: '/tables/regular',
+            path: '/components/typography',
           }"
         >
         </sidebar-item>
@@ -151,7 +154,7 @@
           :link="{
             name: 'Q-Nodes',
             icon: 'ni ni-calendar-grid-58 text-red',
-            path: '/tables/regular',
+            path: '/tables/paginated',
           }"
         >
         </sidebar-item>
@@ -173,7 +176,6 @@
           }"
         >
         </sidebar-item>
-
       </template>
 
       <template v-slot:links-after>

@@ -6,11 +6,10 @@
         <div class="header-body text-center mb-7">
           <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6 col-md-8 px-5">
-              <h1 class="text-white">Q-NetARCH</h1>
-              <p class="text-lead text-white">
-                Welcome to the Q-NetARCH project! Please log in to access
-                the services.
-              </p>
+              <h1 class="display-2 text-white">Q-NetARCH</h1>
+              <h3 class="text-lead text-white">
+                A gateway to quantum network services.
+              </h3>
             </div>
           </div>
         </div>
@@ -135,7 +134,7 @@ export default {
   setup() {
     function onSubmit(values) {
       //alert(JSON.stringify(values, null, 2));
-      //alert(JSON.stringify(values));
+      alert(JSON.stringify(values));
       //console.log(model.rememberMe);
     }
 
