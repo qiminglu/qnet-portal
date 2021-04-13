@@ -17,7 +17,8 @@ export default {
     var myDiagram =
       $(go.Diagram, this.$el,
         {
-          layout: $(go.TreeLayout, { angle: 90, arrangement: go.TreeLayout.ArrangementHorizontal }),
+          //layout: $(go.TreeLayout, { angle: 90, arrangement: go.TreeLayout.ArrangementHorizontal }),
+          layout: $(go.ForceDirectedLayout, { }),
           "undoManager.isEnabled": true,
           // Model ChangedEvents get passed up to component users
           "ModelChanged": function(e) { self.$emit("model-changed", e); },

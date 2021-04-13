@@ -26,7 +26,7 @@
 
             <diagram ref="diag"
               v-bind:model-data="diagramData"
-              style="border:solid 1px black; width:100%; height:400px">
+              style="border:solid 1px black; width:100%; height:600px">
             </diagram>
 
           </card>
@@ -144,15 +144,17 @@ export default {
     return {
       diagramData: {  // passed to <diagram> as its modelData
         nodeDataArray: [
-          { key: 1, text: "Alpha", color: "lightblue" },
-          { key: 2, text: "Beta", color: "orange" },
-          { key: 3, text: "Gamma", color: "lightgreen" },
-          { key: 4, text: "Delta", color: "pink" }
+          { key: 1, text: "Optical Switch 1", color: "lightblue" },
+          { key: 5, text: "Optical Switch 2", color: "lightblue" },
+          { key: 2, text: "Q-Node 1", color: "orange" },
+          { key: 3, text: "Q-Node 2", color: "orange" },
+          { key: 4, text: "EPS", color: "pink" }
         ],
         linkDataArray: [
-          { from: 1, to: 2 },
-          { from: 1, to: 3 },
-          { from: 3, to: 4 }
+          { from: 1, to: 5 },
+          { from: 2, to: 1 },
+          { from: 4, to: 1 },
+          { from: 3, to: 5 }
         ]
       },
       currentNode: null,
