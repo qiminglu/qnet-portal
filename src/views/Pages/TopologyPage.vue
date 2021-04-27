@@ -167,46 +167,101 @@ export default {
         "linkToPortIdProperty": "toPort", 
         "nodeDataArray": [ {
           "key":1, 
-          "name":"Unit One", 
-          "loc":"101 204", 
-          "leftArray":[ {"portColor":"#fae3d7", "portId":"left0"} ], 
-          "topArray":[ {"portColor":"#d6effc", "portId":"top0"} ], 
-          "bottomArray":[ {"portColor":"#ebe3fc", "portId":"bottom0"} ], 
-          "rightArray":[ {"portColor":"#eaeef8", "portId":"right0"},{"portColor":"#fadfe5", "portId":"right1"} ] 
+          "name":"Q-Node 1", 
+          "loc":"100 100", 
+          "leftArray":[ 
+            {"portColor":"#fae3d7", "portId":"left0"} 
+          ], 
+          "topArray":[ 
+            {"portColor":"#d6effc", "portId":"top0"} 
+          ], 
+          "bottomArray":[ 
+            {"portColor":"#ebe3fc", "portId":"bottom0"} 
+          ], 
+          "rightArray":[ 
+            {"portColor":"#eaeef8", "portId":"c1tx"},
+            {"portColor":"#fadfe5", "portId":"c1rx"},
+            {"portColor":"#eaeef8", "portId":"c2tx"},
+            {"portColor":"#fadfe5", "portId":"c2rx"},
+          ] 
         }, {
           "key":2, 
-          "name":"Unit Two", 
-          "loc":"320 152", 
-          "leftArray":[ {"portColor":"#6cafdb", "portId":"left0"},{"portColor":"#66d6d1", "portId":"left1"},{"portColor":"#fae3d7", "portId":"left2"} ], 
-          "topArray":[ {"portColor":"#d6effc", "portId":"top0"} ], 
-          "bottomArray":[ {"portColor":"#eaeef8", "portId":"bottom0"},{"portColor":"#eaeef8", "portId":"bottom1"},{"portColor":"#6cafdb", "portId":"bottom2"} ], 
-          "rightArray":[  ] 
+          "name":"Switch 1", 
+          "loc":"320 150", 
+          "leftArray":[ 
+            {"portColor":"#6cafdb", "portId":"lp0"},
+            {"portColor":"#6cafdb", "portId":"lp1"},
+            {"portColor":"#66d6d1", "portId":"lp2"},
+            {"portColor":"#fae3d7", "portId":"lp3"},
+            {"portColor":"#fae3d7", "portId":"lp4"},
+            {"portColor":"#fae3d7", "portId":"lp5"},
+            {"portColor":"#fae3d7", "portId":"lp6"},
+            {"portColor":"#fae3d7", "portId":"lp7"},
+            {"portColor":"#fae3d7", "portId":"lp8"},
+          ], 
+          "topArray":[ 
+            {"portColor":"#d6effc", "portId":"top0"} 
+          ], 
+          "bottomArray":[ 
+            {"portColor":"#eaeef8", "portId":"bottom0"},
+            {"portColor":"#eaeef8", "portId":"bottom1"},
+            {"portColor":"#6cafdb", "portId":"bottom2"} 
+          ], 
+          "rightArray":[  
+            {"portColor":"#6cafdb", "portId":"rp0"},
+            {"portColor":"#6cafdb", "portId":"rp1"},
+            {"portColor":"#66d6d1", "portId":"rp2"},
+            {"portColor":"#fae3d7", "portId":"rp3"},
+          ] 
         }, {
-
           "key":3, 
-          "name":"Unit Three", 
-          "loc":"384 319", 
-          "leftArray":[ {"portColor":"#66d6d1", "portId":"left0"},{"portColor":"#fadfe5", "portId":"left1"},{"portColor":"#6cafdb", "portId":"left2"} ], 
-          "topArray":[ {"portColor":"#66d6d1", "portId":"top0"} ], 
-          "bottomArray":[ {"portColor":"#6cafdb", "portId":"bottom0"} ], 
-          "rightArray":[  ] 
+          "name":"Switch 2", 
+          "loc":"500 200", 
+          "leftArray":[ 
+            {"portColor":"#6cafdb", "portId":"lp0"},
+            {"portColor":"#6cafdb", "portId":"lp1"},
+            {"portColor":"#66d6d1", "portId":"lp2"},
+            {"portColor":"#fae3d7", "portId":"lp3"},
+          ], 
+          "topArray":[ 
+            {"portColor":"#66d6d1", "portId":"top0"} 
+          ], 
+          "bottomArray":[ 
+            {"portColor":"#6cafdb", "portId":"bottom0"} 
+          ], 
+          "rightArray":[  
+            {"portColor":"#6cafdb", "portId":"rp0"},
+            {"portColor":"#6cafdb", "portId":"rp1"},
+            {"portColor":"#66d6d1", "portId":"rp2"},
+            {"portColor":"#fae3d7", "portId":"rp3"},
+          ] 
         }, {
           "key":4, 
-          "name":"Unit Four", 
-          "loc":"138 351", 
-          "leftArray":[ {"portColor":"#fae3d7", "portId":"left0"} ], 
-          "topArray":[ {"portColor":"#6cafdb", "portId":"top0"} ], 
-          "bottomArray":[ {"portColor":"#6cafdb", "portId":"bottom0"} ], 
-          "rightArray":[ {"portColor":"#6cafdb", "portId":"right0"},{"portColor":"#66d6d1", "portId":"right1"} ]
+          "name":"EPS", 
+          "loc":"100 300", 
+          "leftArray":[ 
+            {"portColor":"#fae3d7", "portId":"left0"} 
+          ], 
+          "topArray":[ 
+            {"portColor":"#6cafdb", "portId":"top0"} 
+          ], 
+          "bottomArray":[ 
+            {"portColor":"#6cafdb", "portId":"bottom0"} 
+          ], 
+          "rightArray":[ 
+            {"portColor":"#6cafdb", "portId":"c1tx"},
+            {"portColor":"#66d6d1", "portId":"c2tx"} 
+          ]
         } ], 
         "linkDataArray": [ 
-          {"from":4, "to":2, "fromPort":"top0", "toPort":"bottom0"}, 
-          {"from":4, "to":2, "fromPort":"top0", "toPort":"bottom0"}, 
-          {"from":3, "to":2, "fromPort":"top0", "toPort":"bottom1"}, 
-          {"from":4, "to":3, "fromPort":"right0", "toPort":"left0"}, 
-          {"from":4, "to":3, "fromPort":"right1", "toPort":"left2"}, 
-          {"from":1, "to":2, "fromPort":"right0", "toPort":"left1"}, 
-          {"from":1, "to":2, "fromPort":"right1", "toPort":"left2"} 
+          {"from":4, "to":2, "fromPort":"c1tx", "toPort":"lp7"}, 
+          {"from":4, "to":2, "fromPort":"c2tx", "toPort":"lp8"}, 
+          {"from":2, "to":3, "fromPort":"rp0", "toPort":"lp2"}, 
+          {"from":2, "to":3, "fromPort":"rp1", "toPort":"lp3"}, 
+          {"from":1, "to":3, "fromPort":"c1tx", "toPort":"rp1"}, 
+          {"from":1, "to":3, "fromPort":"c1rx", "toPort":"rp2"}, 
+          {"from":1, "to":2, "fromPort":"c2tx", "toPort":"lp3"}, 
+          {"from":1, "to":2, "fromPort":"c2rx", "toPort":"lp4"}, 
         ]
       },
       currentNode: null,

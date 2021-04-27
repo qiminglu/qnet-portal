@@ -69,7 +69,7 @@ export default {
           $(go.Shape, "Rectangle",
             {
               fill: "#dbf6cb", stroke: null, strokeWidth: 0,
-              minSize: new go.Size(60, 60)
+              minSize: new go.Size(80, 120)
             }),
           $(go.TextBlock,
             { margin: 10, textAlign: "center", font: "bold 14px Segoe UI,sans-serif", stroke: "#484848", editable: true },
