@@ -68,9 +68,13 @@ export default {
           },
           $(go.Shape, "Rectangle",
             {
-              fill: "#dbf6cb", stroke: null, strokeWidth: 0,
-              minSize: new go.Size(80, 120)
-            }),
+              fill: "#dbf6cb", 
+              stroke: null, 
+              strokeWidth: 0,
+              //minSize: new go.Size(80, 80)
+            },
+            new go.Binding("minSize", "size", go.Size.parse).makeTwoWay(go.Size.stringify),
+          ),
           $(go.TextBlock,
             { margin: 10, textAlign: "center", font: "bold 14px Segoe UI,sans-serif", stroke: "#484848", editable: true },
             new go.Binding("text", "name").makeTwoWay())

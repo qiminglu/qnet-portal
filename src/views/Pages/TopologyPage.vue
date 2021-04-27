@@ -169,6 +169,7 @@ export default {
           "key":1, 
           "name":"Q-Node 1", 
           "loc":"100 100", 
+          "size":"80 80", 
           "leftArray":[ 
             {"portColor":"#fae3d7", "portId":"left0"} 
           ], 
@@ -188,6 +189,7 @@ export default {
           "key":2, 
           "name":"Switch 1", 
           "loc":"320 150", 
+          "size":"80 180", 
           "leftArray":[ 
             {"portColor":"#6cafdb", "portId":"lp0"},
             {"portColor":"#6cafdb", "portId":"lp1"},
@@ -217,6 +219,7 @@ export default {
           "key":3, 
           "name":"Switch 2", 
           "loc":"500 200", 
+          "size":"80 180", 
           "leftArray":[ 
             {"portColor":"#6cafdb", "portId":"lp0"},
             {"portColor":"#6cafdb", "portId":"lp1"},
@@ -239,6 +242,7 @@ export default {
           "key":4, 
           "name":"EPS", 
           "loc":"100 300", 
+          "size":"80 60", 
           "leftArray":[ 
             {"portColor":"#fae3d7", "portId":"left0"} 
           ], 
