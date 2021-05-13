@@ -187,7 +187,7 @@ export default {
           ] 
         }, {
           "key":2, 
-          "name":"Switch 1", 
+          "name":"Optical Switch 1", 
           "loc":"320 150", 
           "size":"80 180", 
           "leftArray":[ 
@@ -210,21 +210,21 @@ export default {
             {"portColor":"#6cafdb", "portId":"bottom2"} 
           ], 
           "rightArray":[  
-            {"portColor":"#6cafdb", "portId":"rp0"},
             {"portColor":"#6cafdb", "portId":"rp1"},
-            {"portColor":"#66d6d1", "portId":"rp2"},
-            {"portColor":"#fae3d7", "portId":"rp3"},
+            {"portColor":"#6cafdb", "portId":"rp2"},
+            {"portColor":"#66d6d1", "portId":"rp3"},
+            {"portColor":"#fae3d7", "portId":"rp4"},
           ] 
         }, {
           "key":3, 
-          "name":"Switch 2", 
+          "name":"Optical Switch 2", 
           "loc":"500 200", 
           "size":"80 180", 
           "leftArray":[ 
-            {"portColor":"#6cafdb", "portId":"lp0"},
             {"portColor":"#6cafdb", "portId":"lp1"},
-            {"portColor":"#66d6d1", "portId":"lp2"},
-            {"portColor":"#fae3d7", "portId":"lp3"},
+            {"portColor":"#6cafdb", "portId":"lp2"},
+            {"portColor":"#66d6d1", "portId":"lp3"},
+            {"portColor":"#fae3d7", "portId":"lp4"},
           ], 
           "topArray":[ 
             {"portColor":"#66d6d1", "portId":"top0"} 
@@ -233,10 +233,10 @@ export default {
             {"portColor":"#6cafdb", "portId":"bottom0"} 
           ], 
           "rightArray":[  
-            {"portColor":"#6cafdb", "portId":"rp0"},
             {"portColor":"#6cafdb", "portId":"rp1"},
-            {"portColor":"#66d6d1", "portId":"rp2"},
-            {"portColor":"#fae3d7", "portId":"rp3"},
+            {"portColor":"#6cafdb", "portId":"rp2"},
+            {"portColor":"#66d6d1", "portId":"rp3"},
+            {"portColor":"#fae3d7", "portId":"rp4"},
           ] 
         }, {
           "key":4, 
@@ -256,17 +256,146 @@ export default {
             {"portColor":"#6cafdb", "portId":"c1tx"},
             {"portColor":"#66d6d1", "portId":"c2tx"} 
           ]
+        }, {
+          "key":5, 
+          "name":"Q-Node 2", 
+          "loc":"700 100", 
+          "size":"80 80", 
+          "leftArray":[ 
+            {"portColor":"#eaeef8", "portId":"c1tx"},
+            {"portColor":"#fadfe5", "portId":"c1rx"},
+            {"portColor":"#eaeef8", "portId":"c2tx"},
+            {"portColor":"#fadfe5", "portId":"c2rx"},
+          ], 
+          "topArray":[ 
+            {"portColor":"#d6effc", "portId":"top0"} 
+          ], 
+          "bottomArray":[ 
+            {"portColor":"#ebe3fc", "portId":"bottom0"} 
+          ], 
+          "rightArray":[ 
+            {"portColor":"#fae3d7", "portId":"left0"} 
+          ] 
         } ], 
         "linkDataArray": [ 
           {"from":4, "to":2, "fromPort":"c1tx", "toPort":"lp7"}, 
           {"from":4, "to":2, "fromPort":"c2tx", "toPort":"lp8"}, 
-          {"from":2, "to":3, "fromPort":"rp0", "toPort":"lp2"}, 
-          {"from":2, "to":3, "fromPort":"rp1", "toPort":"lp3"}, 
-          {"from":1, "to":3, "fromPort":"c1tx", "toPort":"rp1"}, 
-          {"from":1, "to":3, "fromPort":"c1rx", "toPort":"rp2"}, 
+          {"from":2, "to":3, "fromPort":"rp1", "toPort":"lp1"}, 
+          {"from":2, "to":3, "fromPort":"rp2", "toPort":"lp2"}, 
+          {"from":2, "to":3, "fromPort":"rp3", "toPort":"lp3"}, 
+          {"from":2, "to":3, "fromPort":"rp4", "toPort":"lp4"}, 
+          {"from":1, "to":2, "fromPort":"c1tx", "toPort":"lp1"}, 
+          {"from":1, "to":2, "fromPort":"c1rx", "toPort":"lp2"}, 
           {"from":1, "to":2, "fromPort":"c2tx", "toPort":"lp3"}, 
           {"from":1, "to":2, "fromPort":"c2rx", "toPort":"lp4"}, 
+          {"from":5, "to":3, "fromPort":"c1tx", "toPort":"rp1"}, 
+          {"from":5, "to":3, "fromPort":"c1rx", "toPort":"rp2"}, 
+          {"from":5, "to":3, "fromPort":"c2tx", "toPort":"rp3"}, 
+          {"from":5, "to":3, "fromPort":"c2rx", "toPort":"rp4"}, 
         ]
+        /*
+        "nodeDataArray": [ {
+          "key":1, 
+          "name":"Q-Node 1", 
+          "loc":"100 100", 
+          "size":"80 80", 
+          "leftArray":[ 
+            {"portColor":"#fae3d7", "portId":"left0"} 
+          ], 
+          "topArray":[ 
+            {"portColor":"#d6effc", "portId":"top0"} 
+          ], 
+          "bottomArray":[ 
+            {"portColor":"#ebe3fc", "portId":"bottom0"} 
+          ], 
+          "rightArray":[ 
+            {"portColor":"#eaeef8", "portId":"c1tx"},
+            {"portColor":"#fadfe5", "portId":"c1rx"},
+            {"portColor":"#eaeef8", "portId":"c2tx"},
+            {"portColor":"#fadfe5", "portId":"c2rx"},
+          ] 
+        }, {
+          "key":2, 
+          "name":"Optical Switch 1", 
+          "loc":"320 150", 
+          "size":"80 180", 
+          "leftArray":[ 
+            {"portColor":"#6cafdb", "portId":"lp0"},
+            {"portColor":"#6cafdb", "portId":"lp1"},
+            {"portColor":"#66d6d1", "portId":"lp2"},
+            {"portColor":"#fae3d7", "portId":"lp3"},
+            {"portColor":"#fae3d7", "portId":"lp4"},
+            {"portColor":"#fae3d7", "portId":"lp5"},
+            {"portColor":"#fae3d7", "portId":"lp6"},
+            {"portColor":"#fae3d7", "portId":"lp7"},
+            {"portColor":"#fae3d7", "portId":"lp8"},
+          ], 
+          "topArray":[ 
+            {"portColor":"#d6effc", "portId":"top0"} 
+          ], 
+          "bottomArray":[ 
+            {"portColor":"#eaeef8", "portId":"bp1"},
+            {"portColor":"#eaeef8", "portId":"bp2"},
+            {"portColor":"#6cafdb", "portId":"bp3"} 
+          ], 
+          "rightArray":[  
+            {"portColor":"#6cafdb", "portId":"rp1"},
+            {"portColor":"#6cafdb", "portId":"rp2"},
+            {"portColor":"#66d6d1", "portId":"rp3"},
+            {"portColor":"#fae3d7", "portId":"rp4"},
+          ] 
+        }, {
+          "key":4, 
+          "name":"EPS", 
+          "loc":"100 300", 
+          "size":"80 60", 
+          "leftArray":[ 
+            {"portColor":"#fae3d7", "portId":"left0"} 
+          ], 
+          "topArray":[ 
+            {"portColor":"#6cafdb", "portId":"top0"} 
+          ], 
+          "bottomArray":[ 
+            {"portColor":"#6cafdb", "portId":"bottom0"} 
+          ], 
+          "rightArray":[ 
+            {"portColor":"#6cafdb", "portId":"c1tx"},
+            {"portColor":"#66d6d1", "portId":"c2tx"} 
+          ]
+        }, {
+          "key":5, 
+          "name":"Q-Node 2", 
+          "loc":"700 100", 
+          "size":"80 80", 
+          "leftArray":[ 
+            {"portColor":"#eaeef8", "portId":"c1tx"},
+            {"portColor":"#fadfe5", "portId":"c1rx"},
+            {"portColor":"#eaeef8", "portId":"c2tx"},
+            {"portColor":"#fadfe5", "portId":"c2rx"},
+          ], 
+          "topArray":[ 
+            {"portColor":"#d6effc", "portId":"top0"} 
+          ], 
+          "bottomArray":[ 
+            {"portColor":"#ebe3fc", "portId":"bottom0"} 
+          ], 
+          "rightArray":[ 
+            {"portColor":"#fae3d7", "portId":"left0"} 
+          ] 
+        } ], 
+        "linkDataArray": [ 
+          {"from":4, "to":2, "fromPort":"c1tx", "toPort":"lp7"}, 
+          {"from":4, "to":2, "fromPort":"c2tx", "toPort":"lp8"}, 
+          {"from":1, "to":2, "fromPort":"c1tx", "toPort":"lp1"}, 
+          {"from":1, "to":2, "fromPort":"c1rx", "toPort":"lp2"}, 
+          {"from":1, "to":2, "fromPort":"c2tx", "toPort":"lp3"}, 
+          {"from":1, "to":2, "fromPort":"c2rx", "toPort":"lp4"}, 
+          {"from":5, "to":2, "fromPort":"c1tx", "toPort":"rp1"}, 
+          {"from":5, "to":2, "fromPort":"c1rx", "toPort":"rp2"}, 
+          {"from":5, "to":2, "fromPort":"c2tx", "toPort":"bp2"}, 
+          {"from":5, "to":2, "fromPort":"c2rx", "toPort":"bp3"}, 
+        ]
+        */
       },
       currentNode: null,
       savedModelText: "",

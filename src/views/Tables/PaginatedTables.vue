@@ -3,7 +3,7 @@
     <base-header class="pb-6">
       <div class="row align-items-center py-4">
         <div class="col-lg-6 col-7">
-          <h6 class="h2 text-white d-inline-block mb-0">Paginated tables</h6>
+          <h6 class="h2 text-white d-inline-block mb-0">Q-Nodes</h6>
           <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
             <route-bread-crumb></route-bread-crumb>
           </nav>
@@ -22,7 +22,7 @@
           footer-classes="pb-2"
         >
           <template v-slot:header>
-            <h3 class="mb-0">Paginated tables</h3>
+            <h3 class="mb-0">Q-Node List</h3>
             <p class="text-sm mb-0">
               This is a client side example of paginated tables using element-ui
               tables.
@@ -218,17 +218,17 @@ export default {
         },
         {
           prop: "email",
-          label: "Email",
+          label: "Unique ID",
           minWidth: 250,
         },
         {
           prop: "age",
-          label: "Age",
-          minWidth: 100,
+          label: "Channels",
+          minWidth: 120,
         },
         {
           prop: "salary",
-          label: "Salary",
+          label: "Rates",
           minWidth: 120,
         },
       ],

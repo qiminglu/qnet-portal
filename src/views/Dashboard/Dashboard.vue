@@ -32,7 +32,7 @@
         </div>
         <div class="col-xl-3 col-md-6">
           <stats-card
-            title="Total traffic"
+            title="Q-Node traffic"
             type="gradient-orange"
             sub-title="2,356"
             icon="ni ni-chart-pie-35"
@@ -47,7 +47,7 @@
         </div>
         <div class="col-xl-3 col-md-6">
           <stats-card
-            title="Sales"
+            title="Usages"
             type="gradient-green"
             sub-title="924"
             icon="ni ni-money-coins"
@@ -87,7 +87,7 @@
               <div class="row align-items-center">
                 <div class="col">
                   <h6 class="text-light text-uppercase ls-1 mb-1">Overview</h6>
-                  <h5 class="h3 text-white mb-0">Sales value</h5>
+                  <h5 class="h3 text-white mb-0">Q-Network Traffic</h5>
                 </div>
                 <div class="col">
                   <ul class="nav nav-pills justify-content-end">
@@ -131,7 +131,7 @@
                   <h6 class="text-uppercase text-muted ls-1 mb-1">
                     Performance
                   </h6>
-                  <h5 class="h3 mb-0">Total orders</h5>
+                  <h5 class="h3 mb-0">Total Requests</h5>
                 </div>
               </div>
             </template>

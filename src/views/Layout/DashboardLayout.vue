@@ -148,24 +148,25 @@
             path: '/components/typography',
           }"
         >
-        </sidebar-item>
 
-        <sidebar-item
-          :link="{
-            name: 'Q-Nodes',
-            icon: 'ni ni-calendar-grid-58 text-red',
-            path: '/tables/paginated',
-          }"
-        >
-        </sidebar-item>
+          <sidebar-item
+            :link="{
+              name: 'Q-Nodes',
+              icon: 'ni ni-calendar-grid-58 text-red',
+              path: '/tables/paginated',
+            }"
+          >
+          </sidebar-item>
 
-        <sidebar-item
-          :link="{
-            name: 'Topology',
-            icon: 'ni ni-archive-2 text-green',
-            path: '/qnodes',
-          }"
-        >
+          <sidebar-item
+            :link="{
+              name: 'Topology',
+              icon: 'ni ni-archive-2 text-green',
+              path: '/qnodes',
+            }"
+          >
+          </sidebar-item>
+
         </sidebar-item>
 
         <sidebar-item
