@@ -3,7 +3,7 @@
     <base-header class="pb-6">
       <div class="row align-items-center py-4">
         <div class="col-lg-6 col-7">
-          <h6 class="h2 text-white d-inline-block mb-0">{{ $route.name }}</h6>
+          <h6 class="h2 text-white d-inline-block mb-0">Site Administration {{ $route.name }}</h6>
           <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
             <route-breadcrumb />
           </nav>
@@ -15,6 +15,7 @@
       </div>
 
       <!-- Card stats -->
+      <!--
       <div class="row">
         <div class="col-xl-3 col-md-6">
           <stats-card
@@ -77,26 +78,28 @@
           </stats-card>
         </div>
       </div>
+      -->
     </base-header>
 
     <div class="container-fluid mt--6">
       <div class="row card-wrapper">
         <div class="col-lg-4">
           <!-- Basic with list group -->
+          <!--
           <div class="card">
-            <!-- Card image -->
+            <!- - Card image - ->
             <img
               class="card-img-top"
               src="img/theme/img-1-1000x600.jpg"
               alt="Image placeholder"
             />
-            <!-- List group -->
+            <!- - List group - ->
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Cras justo odio</li>
               <li class="list-group-item">Dapibus ac facilisis in</li>
               <li class="list-group-item">Vestibulum at eros</li>
             </ul>
-            <!-- Card body -->
+            <!- - Card body - ->
             <div class="card-body">
               <h3 class="card-title mb-3">Card title</h3>
               <p class="card-text mb-4">
@@ -108,9 +111,9 @@
               <base-button type="primary">Go somewhere</base-button>
             </div>
           </div>
-          <!-- Basic with card title -->
+          <!- - Basic with card title - ->
           <card>
-            <!-- Card body -->
+            <!- - Card body - ->
             <h3 class="card-title mb-3">Card title</h3>
             <p class="card-text mb-4">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
@@ -120,8 +123,10 @@
             </p>
             <base-button type="primary">Go somewhere</base-button>
           </card>
+          -->
 
           <!--Profile card-->
+          <!--
           <div class="card card-profile">
             <img
               src="img/theme/img-1-1000x600.jpg"
@@ -178,26 +183,7 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="col-lg-4">
-          <!-- Basic with card header -->
-          <card>
-            <!-- Card header -->
-            <template v-slot:header>
-              <h5 class="h3 mb-0">Card title</h5>
-            </template>
-            <!-- Card body -->
-            <p class="card-text mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
-              non dolore est fuga nobis ipsum illum eligendi nemo iure repellat,
-              soluta, optio minus ut reiciendis voluptates enim impedit
-              veritatis officiis.
-            </p>
-            <base-button type="primary" class="btn btn-primary"
-              >Go somewhere</base-button
-            >
-          </card>
+          -->
 
           <!-- Contact card -->
           <card>
@@ -206,14 +192,14 @@
               <div class="col-auto">
                 <!-- Avatar -->
                 <a href="#" class="avatar avatar-xl rounded-circle">
-                  <img alt="Image placeholder" src="img/theme/team-2.jpg" />
+                  <img alt="Image placeholder" src="img/theme/user2.png" />
                 </a>
               </div>
               <div class="col ml--2">
                 <h4 class="mb-0">
-                  <a href="#!">John Snow</a>
+                  <a href="#!">Amy Jin</a>
                 </h4>
-                <p class="text-sm text-muted mb-0">Working remoteley</p>
+                <p class="text-sm text-muted mb-0">Site Administrator</p>
                 <span class="text-success">● </span>
                 <small>Active</small>
               </div>
@@ -223,9 +209,98 @@
             </div>
           </card>
 
-          <!-- Team member card -->
+          <!-- Image overlay -->
+          <div class="card bg-dark text-white border-0">
+            <img
+              class="card-img"
+              src="img/theme/img-1-1000x600.jpg"
+              alt="Card image"
+            />
+            <div class="card-img-overlay d-flex align-items-center">
+              <div>
+                <h5 class="h2 card-title text-white mb-2">User Permissions</h5>
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+                <p class="card-text text-sm font-weight-bold">
+                  Last updated 3 mins ago
+                </p>
+              </div>
+            </div>
+          </div>
+
+
           <card>
+            <!-- Card header -->
+            <template v-slot:header>
+              <h5 class="h3 mb-0">User Profile</h5>
+            </template>
             <!-- Card body -->
+            <p class="card-text mb-4">
+              Detailed profile and related information for current user. View the
+              current generated API keys, and manage the privacy and security
+              preferences.
+            </p>
+            <p class="card-text mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+              non dolore est fuga nobis ipsum illum eligendi nemo iure repellat,
+              soluta, optio minus ut reiciendis voluptates enim impedit
+              veritatis officiis.
+            </p>
+            <base-button type="primary" class="btn btn-primary"
+              >Details</base-button
+            >
+          </card>
+
+
+        </div>
+
+        <div class="col-lg-4">
+
+          <card>
+            <template v-slot:header>
+              <h5 class="h3 mb-0">
+                <i class="fas fa-users text-blue"></i>
+                &nbsp;&nbsp;Site User Management
+              </h5>
+            </template>
+            <p class="card-text mb-4">
+              List of all active and in-active users. Check the detailed user profile,
+              update user permissions and security settings.
+            </p>
+            <p class="card-text mb-4 text-warning">
+              This panel is available to site administrators only.
+            </p>
+            <base-button type="primary" class="btn btn-primary"
+              >User Management</base-button
+            >
+          </card>
+
+          <card>
+            <template v-slot:header>
+              <h5 class="h3 mb-0">
+                <i class="fas fa-user text-blue"></i>
+                &nbsp;&nbsp;User Approval
+              </h5>
+            </template>
+            <p class="card-text mb-4">
+              Any registered user needs to be approved by administrators before using
+              the full Q-NetARCH web portal services.
+            </p>
+            <p class="card-text mb-4 text-warning">
+              This panel is available to site administrators only.
+            </p>
+            <base-button type="primary" class="btn btn-primary"
+              >User Approval</base-button
+            >
+          </card>
+
+
+          <!-- Team member card -->
+          <!--
+          <card>
             <a href="#!">
               <img
                 src="img/theme/team-1.jpg"
@@ -262,15 +337,16 @@
               </div>
             </div>
           </card>
+          -->
+
           <!-- Image-Text card -->
+          <!--
           <div class="card">
-            <!-- Card image -->
             <img
               class="card-img-top"
               src="img/theme/img-1-1000x900.jpg"
               alt="Image placeholder"
             />
-            <!-- Card body -->
             <div class="card-body">
               <h5 class="h2 card-title mb-0">Get started with Argon</h5>
               <small class="text-muted"
@@ -283,8 +359,10 @@
               <a href="#!" class="btn btn-link px-0">View article</a>
             </div>
           </div>
+          -->
 
           <!-- Basic with blockquote -->
+          <!--
           <card gradient="default">
             <h3 class="card-title text-white">Testimonial</h3>
             <blockquote class="blockquote text-white mb-0">
@@ -297,9 +375,113 @@
               </footer>
             </blockquote>
           </card>
+          -->
+
+
         </div>
+
+
         <div class="col-lg-4">
+
+          <!-- Basic with card header -->
+          <card>
+            <template v-slot:header>
+              <h5 class="h3 mb-0">
+                Q-NetARCH Site Configuration
+              </h5>
+            </template>
+            <p class="card-text mb-4">
+              Administrators can configure the backend details used for the Q-NetArch
+              Web Portal. Following items can be configured,
+            </p>
+
+            <ul class="list-unstyled my-4">
+              <li style="margin-bottom:15px">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="icon icon-xs icon-shape bg-white text-primary shadow rounded-circle" >
+                      <i class="fas fa-terminal"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="pl-2 text-sm"
+                      >MongoDB server</span
+                    >
+                  </div>
+                </div>
+              </li>
+
+              <li style="margin-bottom:15px">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="icon icon-xs icon-shape bg-white text-primary shadow rounded-circle" >
+                      <i class="fas fa-pen-fancy"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="pl-2 text-sm"
+                      >Mosquitto MQTT queues</span
+                    >
+                  </div>
+                </div>
+              </li>
+
+              <li style="margin-bottom:15px">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="icon icon-xs icon-shape bg-white text-primary shadow rounded-circle" >
+                      <i class="fas fa-hdd"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="pl-2 text-sm"
+                      >Node.js API server</span
+                    >
+                  </div>
+                </div>
+              </li>
+ 
+              <li style="margin-bottom:15px">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="icon icon-xs icon-shape bg-white text-primary shadow rounded-circle" >
+                      <i class="fas fa-hdd"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="pl-2 text-sm"
+                      >Site certificates</span
+                    >
+                  </div>
+                </div>
+              </li>
+ 
+            </ul>
+ 
+            <base-button type="warning" class="btn btn-primary"
+              >Site Configuration</base-button
+            >
+          </card>
+
+          <card>
+            <template v-slot:header>
+              <h5 class="h3 mb-0">
+                <i class="fas fa-cog text-blue"></i>
+                &nbsp;&nbsp;Misc. Site Settings 
+              </h5>
+            </template>
+            <p class="card-text mb-4">
+              The panel provides detailed site configurations from general themes
+              and dark/light mode, to detailed color choices for each component
+            </p>
+            <base-button type="primary" class="btn btn-primary"
+              >Changing Themes</base-button
+            >
+          </card>
+
+
           <!-- Pricing -->
+          <!--
           <card
             gradient="success"
             header-classes="bg-transparent"
@@ -307,13 +489,11 @@
             body-classes="px-lg-7"
             class="card-pricing border-0 text-center mb-4"
           >
-            <!--Header-->
             <template v-slot:header>
               <h4 class="text-uppercase ls-1 text-white py-3 mb-0">
                 Bravo pack
               </h4>
             </template>
-            <!--Card Body-->
             <div class="display-2 text-white">$49</div>
             <span class="text-white">per application</span>
             <ul class="list-unstyled my-4">
@@ -352,9 +532,7 @@
               <li>
                 <div class="d-flex align-items-center">
                   <div>
-                    <div
-                      class="icon icon-xs icon-shape bg-white shadow rounded-circle"
-                    >
+                    <div class="icon icon-xs icon-shape bg-white shadow rounded-circle" >
                       <i class="fas fa-hdd"></i>
                     </div>
                   </div>
@@ -369,18 +547,18 @@
             <base-button type="primary" class="mb-3"
               >Start free trial</base-button
             >
-            <!--Footer-->
             <template v-slot:footer>
               <a href="#!" class="text-white">Request a demo</a>
             </template>
           </card>
+          -->
+
           <!-- Basic with action button -->
+          <!--
           <card>
-            <!-- Card header -->
             <template v-slot:header>
               <div class="row align-items-center">
                 <div class="col-8">
-                  <!-- Title -->
                   <h5 class="h3 mb-0">Card title</h5>
                 </div>
                 <div class="col-4 text-right">
@@ -388,7 +566,6 @@
                 </div>
               </div>
             </template>
-            <!-- Card body -->
             <p class="card-text mb-4">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
               non dolore est fuga nobis ipsum illum eligendi nemo iure repellat,
@@ -397,40 +574,20 @@
             </p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </card>
-          <!-- Image overlay -->
-          <div class="card bg-dark text-white border-0">
-            <img
-              class="card-img"
-              src="img/theme/img-1-1000x600.jpg"
-              alt="Card image"
-            />
-            <div class="card-img-overlay d-flex align-items-center">
-              <div>
-                <h5 class="h2 card-title text-white mb-2">Card title</h5>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <p class="card-text text-sm font-weight-bold">
-                  Last updated 3 mins ago
-                </p>
-              </div>
-            </div>
-          </div>
+          -->
+
           <!-- Pricing card -->
+          <!--
           <card
             header-classes="bg-transparent"
             body-classes="px-lg-7"
             class="card-pricing border-0 text-center mb-4"
           >
-            <!--Header-->
             <template v-slot:header>
               <h4 class="text-uppercase ls-1 text-primary py-3 mb-0">
                 Bravo pack
               </h4>
             </template>
-            <!--Body-->
             <div class="display-2">$49</div>
             <span class="text-muted">per application</span>
             <ul class="list-unstyled my-4">
@@ -482,12 +639,13 @@
             <base-button type="primary" class="mb-3"
               >Start free trial</base-button
             >
-            <!--Footer-->
             <template v-slot:footer>
               <a href="#!" class="text-muted">Request a demo</a>
             </template>
           </card>
+          -->
         </div>
+
       </div>
     </div>
   </div>

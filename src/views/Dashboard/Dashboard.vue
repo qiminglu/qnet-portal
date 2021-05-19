@@ -144,6 +144,7 @@
       <!-- End charts-->
 
       <!--Lists-->
+      <!--
       <div class="row">
         <div class="col-xl-4">
           <card>
@@ -172,9 +173,11 @@
           </card>
         </div>
       </div>
+      -->
       <!--End lists-->
 
       <!--Widgets-->
+      <!--
       <div class="row">
         <div class="col-xl-5">
           <activity-feed></activity-feed>
@@ -250,9 +253,11 @@
           </div>
         </div>
       </div>
+      -->
       <!--End Widgets-->
 
       <!--Tables-->
+      <!--
       <div class="row">
         <div class="col-xl-8">
           <page-visits-table></page-visits-table>
@@ -261,6 +266,7 @@
           <social-traffic-table></social-traffic-table>
         </div>
       </div>
+      -->
       <!--End tables-->
     </div>
   </div>

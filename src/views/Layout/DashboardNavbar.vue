@@ -83,7 +83,7 @@
                 <!-- Avatar -->
                 <img
                   alt="Image placeholder"
-                  src="img/theme/team-1.jpg"
+                  src="img/theme/user.png"
                   class="avatar rounded-circle"
                 />
               </div>
@@ -108,7 +108,7 @@
                 <!-- Avatar -->
                 <img
                   alt="Image placeholder"
-                  src="img/theme/team-2.jpg"
+                  src="img/theme/user.png"
                   class="avatar rounded-circle"
                 />
               </div>
@@ -133,7 +133,7 @@
                 <!-- Avatar -->
                 <img
                   alt="Image placeholder"
-                  src="img/theme/team-3.jpg"
+                  src="img/theme/user.png"
                   class="avatar rounded-circle"
                 />
               </div>
@@ -156,7 +156,7 @@
                 <!-- Avatar -->
                 <img
                   alt="Image placeholder"
-                  src="img/theme/team-4.jpg"
+                  src="img/theme/user.png"
                   class="avatar rounded-circle"
                 />
               </div>
@@ -181,7 +181,7 @@
                 <!-- Avatar -->
                 <img
                   alt="Image placeholder"
-                  src="img/theme/team-5.jpg"
+                  src="img/theme/user.png"
                   class="avatar rounded-circle"
                 />
               </div>
@@ -235,7 +235,7 @@
             <span class="shortcut-media avatar rounded-circle bg-gradient-info">
               <i class="ni ni-credit-card"></i>
             </span>
-            <small>Payments</small>
+            <small>Status</small>
           </a>
           <a href="#!" class="col-4 shortcut-item">
             <span
@@ -259,7 +259,7 @@
             >
               <i class="ni ni-basket"></i>
             </span>
-            <small>Shop</small>
+            <small>TODO</small>
           </a>
         </div>
       </base-dropdown>
@@ -276,10 +276,10 @@
           <a href="#" class="nav-link pr-0" @click.prevent>
             <div class="media align-items-center">
               <span class="avatar avatar-sm rounded-circle">
-                <img alt="Image placeholder" src="img/theme/team-4.jpg" />
+                <img alt="Image placeholder" src="img/theme/user2.png" />
               </span>
               <div class="media-body ml-2 d-none d-lg-block">
-                <span class="mb-0 text-sm font-weight-bold">John Snow</span>
+                <span class="mb-0 text-sm font-weight-bold">Amy Jin</span>
               </div>
             </div>
           </a>

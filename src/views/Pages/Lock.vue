@@ -37,7 +37,7 @@
               <div class="col-lg-3 order-lg-2">
                 <div class="card-profile-image">
                   <img
-                    src="img/theme/team-4.jpg"
+                    src="img/theme/user2.png"
                     class="rounded-circle border-secondary"
                   />
                 </div>
@@ -45,7 +45,7 @@
             </div>
             <div class="card-body pt-7 px-5">
               <div class="text-center mb-4">
-                <h3>Jessica Jones</h3>
+                <h3>Amy Jin</h3>
               </div>
               <form role="form">
                 <base-input

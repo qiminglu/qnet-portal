@@ -42,11 +42,13 @@
             <span class="nav-link-inner--text">Dashboard</span>
           </router-link>
         </li>
+        <!--
         <li class="nav-item">
           <router-link to="/pricing" class="nav-link">
             <span class="nav-link-inner--text">Pricing</span>
           </router-link>
         </li>
+        -->
         <li class="nav-item">
           <router-link to="/login" class="nav-link">
             <span class="nav-link-inner--text">Login</span>
