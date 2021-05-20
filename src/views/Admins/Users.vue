@@ -15,6 +15,7 @@
       </div>
     </base-header>
     <div class="container-fluid mt--6">
+      <!--
       <div class="row">
         <div class="col">
           <light-table />
@@ -26,6 +27,8 @@
       <checkbox-colored-table></checkbox-colored-table>
       <translucent-table></translucent-table>
       <dark-table></dark-table>
+      -->
+      <checkbox-colored-table></checkbox-colored-table>
     </div>
   </div>
 </template>

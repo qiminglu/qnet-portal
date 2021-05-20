@@ -17,7 +17,9 @@ import Register from "../views/Pages/Register.vue";
 import Lock from "../views/Pages/Lock.vue";
 import Profile from "../views/Pages/UserProfile.vue";
 import Timeline from "../views/Pages/TimeLinePage.vue";
+
 import Topology from "../views/Pages/TopologyPage.vue";
+import Empty from "../views/Pages/Empty.vue";
 
 // Components pages
 import Buttons from "../views/Components/Buttons.vue";
@@ -199,6 +201,11 @@ const routes = [
         path: "/qnodes",
         name: "Q-Nodes",
         components: { default: Topology },
+      },
+      {
+        path: "/empty",
+        name: "Empty",
+        components: { default: Empty },
       },
     ],
   },

@@ -273,9 +273,11 @@
             <p class="card-text mb-4 text-warning">
               This panel is available to site administrators only.
             </p>
-            <base-button type="primary" class="btn btn-primary"
-              >User Management</base-button
-            >
+            <router-link to="/admin/users">
+              <base-button type="primary" class="btn btn-primary">
+                User Management
+              </base-button>
+            </router-link>
           </card>
 
           <card>
@@ -460,9 +462,11 @@
  
             </ul>
  
-            <base-button type="warning" class="btn btn-primary" >
-              <i class="fas fa-exclamation-triangle"></i>&nbsp; Site Configuration
-            </base-button>
+            <router-link to="/empty">
+              <base-button type="warning" class="btn btn-primary" >
+                <i class="fas fa-exclamation-triangle"></i>&nbsp; Site Configuration
+              </base-button>
+            </router-link>
           </card>
 
           <card>
@@ -476,9 +480,11 @@
               The panel provides detailed site configurations from general themes
               and dark/light mode, to detailed color choices for each component
             </p>
-            <base-button type="primary" class="btn btn-primary"
-              >Changing Themes</base-button
-            >
+            <router-link to="/empty">
+              <base-button type="primary" class="btn btn-primary">
+                Changing Themes
+              </base-button>
+            </router-link>
           </card>
 
 
