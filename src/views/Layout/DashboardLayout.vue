@@ -187,7 +187,7 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="https://demos.creative-tim.com/vue-argon-dashboard-pro/documentation"
+              href="https://www.fnal.gov"
               target="_blank"
             >
               <i class="ni ni-spaceship"></i>
@@ -197,7 +197,7 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="https://demos.creative-tim.com/vue-argon-dashboard-pro/documentation/foundation/colors.html"
+              href="https://www.fnal.gov"
               target="_blank"
             >
               <i class="ni ni-palette"></i>
@@ -207,7 +207,7 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="https://demos.creative-tim.com/vue-argon-dashboard-pro/documentation/components/avatars.html"
+              href="https://www.fnal.gov"
               target="_blank"
             >
               <i class="ni ni-ui-04"></i>
@@ -217,7 +217,7 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="https://demos.creative-tim.com/vue-argon-dashboard-pro/documentation/components/plugin_datepicker.html"
+              href="https://www.fnal.gov"
               target="_blank"
             >
               <i class="ni ni-chart-pie-35"></i>
