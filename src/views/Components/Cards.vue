@@ -292,9 +292,11 @@
             <p class="card-text mb-4 text-warning">
               This panel is available to site administrators only.
             </p>
-            <base-button type="primary" class="btn btn-primary"
-              >User Approval</base-button
-            >
+            <router-link to="/admin/users">
+              <base-button type="primary" class="btn btn-primary">
+                User Approval
+              </base-button>
+            </router-link>
           </card>
 
 
@@ -387,7 +389,7 @@
           <card>
             <template v-slot:header>
               <h5 class="h3 mb-0">
-                Q-NetARCH Site Configuration
+                Q-NetARCH Server Configuration
               </h5>
             </template>
             <p class="card-text mb-4">
@@ -420,7 +422,7 @@
                   </div>
                   <div>
                     <span class="pl-2 text-sm"
-                      >Mosquitto MQTT queues</span
+                      >Mosquitto MQTT broker</span
                     >
                   </div>
                 </div>
@@ -445,12 +447,12 @@
                 <div class="d-flex align-items-center">
                   <div>
                     <div class="icon icon-xs icon-shape bg-white text-primary shadow rounded-circle" >
-                      <i class="fas fa-hdd"></i>
+                      <i class="fas fa-cloud"></i>
                     </div>
                   </div>
                   <div>
-                    <span class="pl-2 text-sm"
-                      >Site certificates</span
+                    <span class="pl-2 text-sm">
+                      Site certificates</span
                     >
                   </div>
                 </div>
@@ -458,9 +460,9 @@
  
             </ul>
  
-            <base-button type="warning" class="btn btn-primary"
-              >Site Configuration</base-button
-            >
+            <base-button type="warning" class="btn btn-primary" >
+              <i class="fas fa-exclamation-triangle"></i>&nbsp; Site Configuration
+            </base-button>
           </card>
 
           <card>

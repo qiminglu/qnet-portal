@@ -41,6 +41,9 @@ import FormElements from "../views/Forms/FormElements.vue";
 import FormComponents from "../views/Forms/FormComponents.vue";
 import FormValidation from "../views/Forms/FormValidation.vue";
 
+// Admin pages
+import UsersPage from "../views/Admins/Users.vue";
+
 let componentsMenu = {
   path: "/components",
   component: DashboardLayout,
@@ -198,6 +201,19 @@ const routes = [
         components: { default: Topology },
       },
     ],
+  },
+  {
+    path: "/admin",
+    redirect: "/login",
+    component: DashboardLayout,
+    name: "Admins",
+    children: [
+      {
+        path: "/admin/users",
+        name: "Users",
+        components: { default: UsersPage },
+      }
+    ]
   },
   {
     path: "/",
