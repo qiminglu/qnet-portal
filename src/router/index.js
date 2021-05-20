@@ -46,6 +46,10 @@ import FormValidation from "../views/Forms/FormValidation.vue";
 // Admin pages
 import UsersPage from "../views/Admins/Users.vue";
 
+// Service pages
+import EntanglementPage from "../views/Service/Entanglement.vue";
+import TeleportationPage from "../views/Service/Teleportation.vue";
+
 let componentsMenu = {
   path: "/components",
   component: DashboardLayout,
@@ -219,6 +223,24 @@ const routes = [
         path: "/admin/users",
         name: "Users",
         components: { default: UsersPage },
+      }
+    ]
+  },
+  {
+    path: "/service",
+    redirect: "/login",
+    component: DashboardLayout,
+    name: "Services",
+    children: [
+      {
+        path: "/service/entanglement",
+        name: "Entanglement",
+        components: { default: EntanglementPage },
+      },
+      {
+        path: "/service/teleportation",
+        name: "Teleportation",
+        components: { default: TeleportationPage },
       }
     ]
   },

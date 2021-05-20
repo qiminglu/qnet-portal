@@ -133,11 +133,14 @@
           <sidebar-item
             :link="{
               name: 'Entanglement Distribution',
-              path: '/components/buttons',
+              path: '/service/entanglement',
             }"
           ></sidebar-item>
           <sidebar-item
-            :link="{ name: 'Teleportation', path: '/pages/user' }"
+            :link="{ 
+              name: 'Teleportation', 
+              path: '/service/teleportation' 
+            }"
           ></sidebar-item>
         </sidebar-item>
 
