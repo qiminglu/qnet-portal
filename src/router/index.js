@@ -19,6 +19,8 @@ import Profile from "../views/Pages/UserProfile.vue";
 import Timeline from "../views/Pages/TimeLinePage.vue";
 
 import Topology from "../views/Pages/TopologyPage.vue";
+import TopoMap from "../views/Pages/TopoMapPage.vue";
+
 import Empty from "../views/Pages/Empty.vue";
 
 // Components pages
@@ -202,9 +204,14 @@ const routes = [
         components: { default: Timeline },
       },
       {
-        path: "/qnodes",
-        name: "Q-Nodes",
+        path: "/qnodes/topo",
+        name: "Q-Nodes Topology",
         components: { default: Topology },
+      },
+      {
+        path: "/qnodes/map",
+        name: "Q-Nodes Geolocations",
+        components: { default: TopoMap },
       },
       {
         path: "/empty",

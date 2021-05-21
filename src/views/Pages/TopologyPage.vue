@@ -20,9 +20,13 @@
 
         <div class="col-lg-12">
           <card header-classes="bg-transparent">
+            <!--
             <template v-slot:header>
               <h3 class="mb-0">System Topology</h3>
             </template>
+            -->
+
+            <div id="map" class="map-canvas" style="height: 300px; margin-bottom:20px"></div>
 
             <diagram ref="diag"
               v-bind:model-data="diagramData"
@@ -32,111 +36,22 @@
           </card>
         </div>
 
-        <!--
-        <div class="col-lg-6">
-          <card shadow gradient="default" header-classes="bg-transparent">
-            <template v-slot:header>
-              <h3 class="mb-0 text-white">Dark timeline</h3>
-            </template>
-            <time-line type="one-side">
-              <time-line-item badge-type="success" badge-icon="ni ni-bell-55">
-                <small class="text-light font-weight-bold">10:30 AM</small>
-                <h5 class="text-white mt-3 mb-0">New message</h5>
-                <p class="text-light text-sm mt-1 mb-0">
-                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cum
-                  sociis natoque penatibus et magnis dis parturient montes,
-                  nascetur ridiculus mus.
-                </p>
-                <div class="mt-3">
-                  <badge rounded type="success">design</badge>&nbsp;
-                  <badge rounded type="success">system</badge>&nbsp;
-                  <badge rounded type="success">creative</badge>
-                </div>
-              </time-line-item>
-
-              <time-line-item badge-type="danger" badge-icon="ni ni-html5">
-                <small class="text-light font-weight-bold">10:30 AM</small>
-                <h5 class="text-white mt-3 mb-0">Product issue</h5>
-                <p class="text-light text-sm mt-1 mb-0">
-                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cum
-                  sociis natoque penatibus et magnis dis parturient montes,
-                  nascetur ridiculus mus.
-                </p>
-                <div class="mt-3">
-                  <badge rounded type="danger">design</badge>&nbsp;
-                  <badge rounded type="danger">system</badge>&nbsp;
-                  <badge rounded type="danger">creative</badge>
-                </div>
-              </time-line-item>
-
-              <time-line-item badge-type="info" badge-icon="ni ni-like-2">
-                <small class="text-light font-weight-bold">10:30 AM</small>
-                <h5 class="text-white mt-3 mb-0">New likes</h5>
-                <p class="text-light text-sm mt-1 mb-0">
-                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cum
-                  sociis natoque penatibus et magnis dis parturient montes,
-                  nascetur ridiculus mus.
-                </p>
-                <div class="mt-3">
-                  <badge rounded type="info">design</badge>&nbsp;
-                  <badge rounded type="info">system</badge>&nbsp;
-                  <badge rounded type="info">creative</badge>
-                </div>
-              </time-line-item>
-
-              <time-line-item badge-type="success" badge-icon="ni ni-bell-55">
-                <small class="text-light font-weight-bold">10:30 AM</small>
-                <h5 class="text-white mt-3 mb-0">New message</h5>
-                <p class="text-light text-sm mt-1 mb-0">
-                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cum
-                  sociis natoque penatibus et magnis dis parturient montes,
-                  nascetur ridiculus mus.
-                </p>
-                <div class="mt-3">
-                  <badge rounded type="success">design</badge>&nbsp;
-                  <badge rounded type="success">system</badge>&nbsp;
-                  <badge rounded type="success">creative</badge>
-                </div>
-              </time-line-item>
-
-              <time-line-item badge-type="danger" badge-icon="ni ni-html5">
-                <small class="text-light font-weight-bold">10:30 AM</small>
-                <h5 class="text-white mt-3 mb-0">Product issue</h5>
-                <p class="text-light text-sm mt-1 mb-0">
-                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cum
-                  sociis natoque penatibus et magnis dis parturient montes,
-                  nascetur ridiculus mus.
-                </p>
-                <div class="mt-3">
-                  <badge rounded type="danger">design</badge>&nbsp;
-                  <badge rounded type="danger">system</badge>&nbsp;
-                  <badge rounded type="danger">creative</badge>
-                </div>
-              </time-line-item>
-            </time-line>
-          </card>
-        </div>
-        -->
-
       </div>
     </div>
   </div>
 </template>
 <script>
-//import TimeLine from "@/components/Timeline/TimeLine";
-//import TimeLineItem from "@/components/Timeline/TimeLineItem";
 import RouteBreadcrumb from "@/components/Breadcrumb/RouteBreadcrumb";
 import BaseHeader from "@/components/BaseHeader";
-//import Badge from "@/components/Badge";
 
 import Diagram from "@/components/Diagram";
 
+import { Loader } from "@googlemaps/js-api-loader";
+const loader = new Loader({ apiKey: "" });
+
 export default {
   components: {
-    //Badge,
     BaseHeader,
-    //TimeLine,
-    //TimeLineItem,
     RouteBreadcrumb,
     Diagram,
   },
@@ -402,6 +317,110 @@ export default {
       counter: 1,  // used by addNode
       counter2: 4  // used by modifyStuff
     };
+  },
+  mounted() {
+    loader.load().then(function () {
+      // Regular Map
+      const myLatlng = new google.maps.LatLng(41.84141, -88.25352);
+      const myLatlng2 = new google.maps.LatLng(41.71821, -87.97936);
+      const mapOptions = {
+        zoom: 12,
+        //center: myLatlng,
+        //scrollwheel: false, // we disable de scroll over the map, it is a really annoing when you scroll through page
+        disableDefaultUI: true, // a way to quickly hide all controls
+        zoomControl: true,
+        styles: [
+          {
+            featureType: "administrative",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#888888" }],
+          },
+          {
+            featureType: "landscape",
+            elementType: "all",
+            stylers: [{ color: "#f2f2f2" }],
+          },
+          {
+            featureType: "poi",
+            elementType: "all",
+            stylers: [{ visibility: "off" }],
+          },
+          {
+            featureType: "road",
+            elementType: "all",
+            stylers: [{ saturation: -100 }, { lightness: 45 }],
+          },
+          {
+            featureType: "road.highway",
+            elementType: "all",
+            stylers: [{ visibility: "simplified" }],
+          },
+          {
+            featureType: "road.arterial",
+            elementType: "labels.icon",
+            stylers: [{ visibility: "off" }],
+          },
+          {
+            featureType: "transit",
+            elementType: "all",
+            stylers: [{ visibility: "off" }],
+          },
+          {
+            featureType: "water",
+            elementType: "all",
+            stylers: [{ color: "#0E87CC" }, { visibility: "on" }],
+          },
+        ],
+      };
+      var map = new google.maps.Map(
+        document.getElementById("map"),
+        mapOptions
+      );
+
+      const marker = new google.maps.Marker({
+        position: myLatlng,
+        label: 'Q1',
+        title: "Regular Map!",
+        map: map,
+      });
+
+      const marker2 = new google.maps.Marker({
+        position: myLatlng2,
+        label: 'Q2',
+        title: "Map2!",
+        map: map,
+      });
+
+      const lineSymbol = {
+        path: "M 0,-1 0,1",
+        strokeOpacity: 1,
+        scale: 4,
+      };
+
+      const path = new google.maps.Polyline({
+        path: [myLatlng, myLatlng2],
+        strokeColor: "#D3494E",
+        strokeOpacity: 0,
+        icons: [
+          {
+            icon: lineSymbol,
+            offset: "0",
+            repeat: "20px",
+          },
+        ],
+        map: map,
+      })
+
+      var bounds = new google.maps.LatLngBounds();
+      bounds.extend(marker.position);
+      bounds.extend(marker2.position);
+
+      map.fitBounds(bounds);
+      var listener = google.maps.event.addListener(map, "idle", function () { 
+        //map.setZoom(12); 
+        google.maps.event.removeListener(listener); 
+      });
+    });
   },
 };
 </script>

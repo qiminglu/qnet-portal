@@ -27,8 +27,8 @@
   </div>
 </template>
 <script>
-import { Loader } from "@googlemaps/js-api-loader";
-const loader = new Loader({ apiKey: "YOUR_API_KEY" });
+//import { Loader } from "@googlemaps/js-api-loader";
+//const loader = new Loader({ apiKey: "YOUR_API_KEY" });
 import RouteBreadCrumb from "@/components/Breadcrumb/RouteBreadcrumb";
 
 export default {

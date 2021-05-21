@@ -126,7 +126,7 @@
         -->
         <sidebar-item
           :link="{
-            name: 'Services',
+            name: 'QNet-Services',
             icon: 'ni ni-ungroup text-orange',
           }"
         >
@@ -146,7 +146,7 @@
 
         <sidebar-item
           :link="{
-            name: 'Monitoring',
+            name: 'QNet-Monitoring',
             icon: 'ni ni-map-big text-primary',
             path: '/components/typography',
           }"
@@ -165,12 +165,23 @@
             :link="{
               name: 'Topology',
               icon: 'ni ni-archive-2 text-green',
-              path: '/qnodes',
+              path: '/qnodes/topo',
             }"
           >
           </sidebar-item>
 
         </sidebar-item>
+
+        <sidebar-item
+          :link="{
+            name: 'QNet-Management',
+            icon: 'ni ni-map-big text-primary',
+            path: '/components/typography',
+          }"
+        >
+        </sidebar-item>
+
+
 
         <sidebar-item
           :link="{
