@@ -148,7 +148,6 @@
           :link="{
             name: 'QNet-Monitoring',
             icon: 'ni ni-map-big text-primary',
-            path: '/components/typography',
           }"
         >
 
@@ -156,7 +155,7 @@
             :link="{
               name: 'Q-Nodes',
               icon: 'ni ni-calendar-grid-58 text-red',
-              path: '/tables/paginated',
+              path: '/monitoring/qnodes',
             }"
           >
           </sidebar-item>
@@ -165,7 +164,7 @@
             :link="{
               name: 'Topology',
               icon: 'ni ni-archive-2 text-green',
-              path: '/qnodes/topo',
+              path: '/monitoring/topology',
             }"
           >
           </sidebar-item>
@@ -174,20 +173,18 @@
 
         <sidebar-item
           :link="{
-            name: 'QNet-Management',
+            name: 'Management',
             icon: 'ni ni-map-big text-primary',
-            path: '/components/typography',
+            path: '/manage/main',
           }"
         >
         </sidebar-item>
-
-
 
         <sidebar-item
           :link="{
             name: 'Admin',
             icon: 'ni ni-chart-pie-35 text-info',
-            path: '/components/cards',
+            path: '/admin/main',
           }"
         >
         </sidebar-item>

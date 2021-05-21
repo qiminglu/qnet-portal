@@ -18,8 +18,6 @@ import Lock from "../views/Pages/Lock.vue";
 import Profile from "../views/Pages/UserProfile.vue";
 import Timeline from "../views/Pages/TimeLinePage.vue";
 
-import Topology from "../views/Pages/TopologyPage.vue";
-import TopoMap from "../views/Pages/TopoMapPage.vue";
 
 import Empty from "../views/Pages/Empty.vue";
 
@@ -45,12 +43,20 @@ import FormElements from "../views/Forms/FormElements.vue";
 import FormComponents from "../views/Forms/FormComponents.vue";
 import FormValidation from "../views/Forms/FormValidation.vue";
 
-// Admin pages
-import UsersPage from "../views/Admins/Users.vue";
-
 // Service pages
 import EntanglementPage from "../views/Service/Entanglement.vue";
 import TeleportationPage from "../views/Service/Teleportation.vue";
+
+// Monitoring
+import QNodes from "../views/Monitoring/QNodes.vue";
+import Topology from "../views/Monitoring/TopologyPage.vue";
+
+// Management
+import Management from "../views/Management/Main.vue";
+
+// Admin pages
+import AdminMain from "../views/Admins/Main.vue";
+import UsersPage from "../views/Admins/Users.vue";
 
 let componentsMenu = {
   path: "/components",
@@ -209,29 +215,11 @@ const routes = [
         components: { default: Topology },
       },
       {
-        path: "/qnodes/map",
-        name: "Q-Nodes Geolocations",
-        components: { default: TopoMap },
-      },
-      {
         path: "/empty",
         name: "Empty",
         components: { default: Empty },
       },
     ],
-  },
-  {
-    path: "/admin",
-    redirect: "/login",
-    component: DashboardLayout,
-    name: "Admins",
-    children: [
-      {
-        path: "/admin/users",
-        name: "Users",
-        components: { default: UsersPage },
-      }
-    ]
   },
   {
     path: "/service",
@@ -248,6 +236,60 @@ const routes = [
         path: "/service/teleportation",
         name: "Teleportation",
         components: { default: TeleportationPage },
+      }
+    ]
+  },
+  {
+    path: "/monitoring",
+    redirect: "/login",
+    component: DashboardLayout,
+    name: "QNet-Monitoring",
+    children: [
+      {
+        path: "/monitoring/qnodes",
+        name: "Q-Nodes",
+        components: { default: QNodes },
+      },
+      {
+        path: "/monitoring/topology",
+        name: "Topology",
+        components: { default: Topology },
+      },
+    ]
+  },
+  {
+    path: "/manage",
+    redirect: "/login",
+    component: DashboardLayout,
+    name: "Management",
+    children: [
+      {
+        path: "main",
+        name: "Q-Net Management",
+        components: { default: Management },
+      },
+      {
+        path: "users",
+        name: "Management Users",
+        components: { default: UsersPage },
+      }
+    ]
+  },
+  {
+    path: "/admin",
+    redirect: "/login",
+    component: DashboardLayout,
+    name: "Admins",
+    children: [
+      {
+        path: "/admin/main",
+        name: "Main",
+        components: { default: AdminMain },
+      },
+      {
+        path: "/admin/users",
+        name: "Users",
+        components: { default: UsersPage },
       }
     ]
   },
