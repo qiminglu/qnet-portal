@@ -75,10 +75,10 @@
             data-toggle="tooltip"
             data-original-title="Like us on Facebook"
           >
-            <i class="fab fa-facebook-square"></i>
-            <span class="nav-link-inner--text d-lg-none">Facebook</span>
+            <img src="img/brand/fermilab-logo.png" style="height:20px"/>
           </a>
         </li>
+        <!--
         <li class="nav-item">
           <a
             class="nav-link nav-link-icon"
@@ -115,6 +115,7 @@
             <span class="nav-link-inner--text d-lg-none">Github</span>
           </a>
         </li>
+        -->
         <li class="nav-item d-none d-lg-block ml-lg-4">
           <a
             href="https://www.creative-tim.com/product/vue-argon-dashboard-pro"
