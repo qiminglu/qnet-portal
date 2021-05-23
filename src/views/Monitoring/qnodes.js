@@ -1,0 +1,38 @@
+export default [
+  {
+    img: "img/theme/bootstrap.jpg",
+    title: "FNAL-QN-1",
+    id: "142e5b8a-abcb",
+    status: "pending",
+    statusType: "warning",
+    channels: "Quantum, Classic",
+    completion: 60,
+  },
+  {
+    img: "img/theme/bootstrap.jpg",
+    title: "FNAL-QN-2",
+    id: "28e93ac2-abcb",
+    status: "ready",
+    statusType: "success",
+    channels: "Quantum, Classic",
+    completion: 100,
+  },
+  {
+    img: "img/theme/sketch.jpg",
+    title: "ARGONNE-QN-0",
+    id: "9397aa68-c665",
+    status: "in use",
+    statusType: "danger",
+    channels: "Classic",
+    completion: 72,
+  },
+  {
+    img: "img/theme/react.jpg",
+    title: "ARGONNE-QN-2",
+    id: "17929b30-dd7c",
+    status: "ready",
+    statusType: "info",
+    channels: "Classic",
+    completion: 90,
+  },
+];

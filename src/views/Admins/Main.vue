@@ -390,6 +390,7 @@
         <div class="col-lg-4">
 
           <!-- Basic with card header -->
+          <!--
           <card>
             <template v-slot:header>
               <h5 class="h3 mb-0">
@@ -470,6 +471,7 @@
               </base-button>
             </router-link>
           </card>
+          -->
 
           <card>
             <template v-slot:header>
@@ -482,6 +484,56 @@
               The panel provides detailed site configurations from general themes
               and dark/light mode, to detailed color choices for each component
             </p>
+
+            <ul class="list-unstyled my-4">
+              <li style="margin-bottom:15px">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="icon icon-xs icon-shape bg-white text-primary shadow rounded-circle" >
+                      <i class="fas fa-terminal"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="pl-2 text-sm"
+                      >Switch Dark/Light Mode</span
+                    >
+                  </div>
+                </div>
+              </li>
+
+              <li style="margin-bottom:15px">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="icon icon-xs icon-shape bg-white text-primary shadow rounded-circle" >
+                      <i class="fas fa-pen-fancy"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="pl-2 text-sm"
+                      >Menu Configuration</span
+                    >
+                  </div>
+                </div>
+              </li>
+
+              <li style="margin-bottom:15px">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="icon icon-xs icon-shape bg-white text-primary shadow rounded-circle" >
+                      <i class="fas fa-hdd"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="pl-2 text-sm"
+                      >Color Themes</span
+                    >
+                  </div>
+                </div>
+              </li>
+ 
+            </ul>
+ 
+
             <router-link to="/empty">
               <base-button type="primary" class="btn btn-primary">
                 Changing Themes

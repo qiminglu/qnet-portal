@@ -16,6 +16,8 @@
     </base-header>
     <div class="container-fluid mt--6">
       <div>
+
+        <!--
         <card
           class="no-border-card"
           body-classes="px-0 pb-1"
@@ -23,10 +25,6 @@
         >
           <template v-slot:header>
             <h3 class="mb-0">Q-Node List</h3>
-            <p class="text-sm mb-0">
-              This is a client side example of paginated tables using element-ui
-              tables.
-            </p>
           </template>
           <div>
             <div
@@ -108,6 +106,7 @@
               </el-table-column>
             </el-table>
           </div>
+
           <template v-slot:footer>
             <div
               class="col-12 d-flex justify-content-center justify-content-sm-between flex-wrap"
@@ -126,7 +125,14 @@
               </base-pagination>
             </div>
           </template>
+
         </card>
+        -->
+
+
+        <light-table />
+        <dark-table></dark-table>
+
       </div>
     </div>
   </div>
@@ -141,6 +147,8 @@ import {
 } from "element-plus";
 import RouteBreadCrumb from "@/components/Breadcrumb/RouteBreadcrumb";
 import BasePagination from "@/components/BasePagination";
+import LightTable from "./RegularTables/LightTable";
+import DarkTable from "./RegularTables/DarkTable";
 import swal from "sweetalert2";
 import users from "./users2";
 
@@ -148,6 +156,8 @@ export default {
   components: {
     BasePagination,
     RouteBreadCrumb,
+    LightTable,
+    DarkTable,
     [ElSelect.name]: ElSelect,
     [ElOption.name]: ElOption,
     [ElTable.name]: ElTable,

@@ -173,8 +173,8 @@
 
         <sidebar-item
           :link="{
-            name: 'Management',
-            icon: 'ni ni-map-big text-primary',
+            name: 'QNet-Management',
+            icon: 'ni ni-world text-primary',
             path: '/manage/main',
           }"
         >
