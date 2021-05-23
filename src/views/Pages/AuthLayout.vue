@@ -11,7 +11,7 @@
       <template v-slot:brand>
         <div class="navbar-wrapper">
           <router-link class="navbar-brand" to="/">
-            <img src="img/brand/qnet-white.png" />
+            <img src="img/brand/qnet-white.png" style="height:50px"/>
           </router-link>
         </div>
       </template>
