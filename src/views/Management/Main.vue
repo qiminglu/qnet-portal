@@ -3,7 +3,7 @@
     <base-header class="pb-6">
       <div class="row align-items-center py-4">
         <div class="col-lg-6 col-7">
-          <h6 class="h2 text-white d-inline-block mb-0">Site Administration </h6>
+          <h6 class="h2 text-white d-inline-block mb-0">{{$route.name}}</h6>
           <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
             <route-breadcrumb />
           </nav>
@@ -17,13 +17,31 @@
 
     <div class="container-fluid mt--6">
       <div class="row card-wrapper">
+        <div class="col-lg-12">
+          <card>
+            <template v-slot:header>
+              <h5 class="h3 mb-0">
+                Q-NetARCH Management Dashboard
+              </h5>
+            </template>
+            <p class="card-text mb-4">
+              Site administrators can manage the Q-Net server and components, including
+              Q-Nodes, EPS, BSM stations, and SDN controllers in the following panels.
+            </p>
+          </card>
+
+
+        </div>
+      </div>
+
+      <div class="row card-wrapper">
         <div class="col-lg-4">
 
           <!-- Basic with card header -->
           <card>
             <template v-slot:header>
               <h5 class="h3 mb-0">
-                Q-NetARCH Server Configuration
+                Server Configuration
               </h5>
             </template>
             <p class="card-text mb-4">
